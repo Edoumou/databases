@@ -33,12 +33,11 @@ class FakeDb {
     }
 
     seedDb() {
-        this.cleanDb();
         this.pushEmployeesToDb();
     }
 
     async cleanDb() {
-        await Employee.remove({});
+        await Employee.deleteMany({});
     }
 }
 
