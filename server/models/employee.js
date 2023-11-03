@@ -8,3 +8,5 @@ const employeeSchema = new Schema({
     salary: Number,
     designation: { type: String, required: true }
 });
+
+module.exports = mongoose.model('Employee', employeeSchema);
